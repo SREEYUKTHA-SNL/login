@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'blank_page.dart';
 
-
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -62,13 +61,20 @@ class _LoginPageState extends State<LoginPage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Welcome Back',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-            Text('sign in to continue your wellness journey',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
-
+            Text(
+              'Welcome Back!',
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'sign in to continue your wellness journey',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             TextField(
               controller: _usernameController,
               decoration: const InputDecoration(labelText: 'phone number'),
@@ -105,9 +111,25 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 16),
             Center(
-              child: ElevatedButton(
-                onPressed: _onSubmit,
-                child: const Text('Submit'),
+              child: SizedBox(
+                width: 200,
+                child: ElevatedButton(
+                  onPressed: _onSubmit,
+                  style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+              
+                ),
+                child: const Text(
+                  'SIGN IN',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ),
               ),
             ),
           ],
