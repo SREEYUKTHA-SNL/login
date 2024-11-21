@@ -63,9 +63,12 @@ class _LoginPageState extends State<LoginPage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Welcome Back',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text('Welcome Back',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+            Text('sign in to continue your wellness journey',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+
             TextField(
               controller: _usernameController,
               decoration: const InputDecoration(labelText: 'phone number'),
