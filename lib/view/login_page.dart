@@ -62,8 +62,10 @@ class _LoginPageState extends State<LoginPage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text('Welcome Back',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
             TextField(
               controller: _usernameController,
               decoration: const InputDecoration(labelText: 'phone number'),
